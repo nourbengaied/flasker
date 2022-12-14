@@ -1,4 +1,5 @@
 from flask import Flask, render_template, flash, request, redirect, url_for
+#from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime 
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -11,6 +12,7 @@ from flask_ckeditor import CKEditor
 from werkzeug.utils import secure_filename
 import uuid as uuid
 import os
+import sqlalchemy
 
 
 # Create a Flask Instance
@@ -20,7 +22,7 @@ ckeditor = CKEditor(app)
 # Add Database
 # Old SQLite DB
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://fvmdxyjigwbmiu:d31d36c7613e08f7ad37a6e40007189d7f2f44fbc99234b339994780a122d870@ec2-3-214-190-189.compute-1.amazonaws.com:5432/d17b5scj97ckqe'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://yvnnxfeuwylwoo:8b5332285b473ab1578a9f5ea3f8d50b77d65889c0071224debf92fe5de59a2f@ec2-54-173-77-184.compute-1.amazonaws.com:5432/d4qvi7mbgum8rb'
 # New MySQL DB
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/db_name'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password123@localhost/our_users'
